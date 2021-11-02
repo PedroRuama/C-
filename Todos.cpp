@@ -19,19 +19,20 @@ int main (){
 		cout << "" << endl;
 		cout << "2.  Calcular IMC. " << endl;
 		cout << "" << endl;
-		cout << "3.  Ler numero e exibir mensagem dizendo se é par ou impar. " << endl;
+		cout << "3.  Ler numero e exibir mensagem dizendo se e par ou impar. " << endl;
 		cout << "" << endl;
 		cout << "4.  Dados 3 valores quaisquer (a, b e c) representando as medidas dos lados de um triangulo, faca um algoritmo" << endl;
-		cout << " para descobrir se formam ou não um triângulo, se for triangulo qual seria: isosceles, escaleno ou equilatero." << endl;
+		cout << " para descobrir se formam ou nao um triangulo, se for triangulo qual seria: isosceles, escaleno ou equilatero." << endl;
 		cout << "" << endl;
 		cout << "5.  Inserir 3 números e exibir o maior deles. " << endl;
 		cout << "" << endl;
 		cout << "6.  Montar programa solicitando descricao do produto, preço e % de desconto, exibir preço final com o desconto." << endl;
 		cout << "" << endl;
-		cout << "7.  Ler a idade de uma pessoa e informar a sua classe eleitoral: Menor, Opcional votar, Obrigatório ou Dispensado." << endl;
+		cout << "7.  Ler a idade de uma pessoa e informar a sua classe eleitoral: Menor, Opcional votar, Obrigatorio ou Dispensado." << endl;
 		cout << "" << endl;
 		cout << "8.  Solicitar salario, prestação. Se prestação for maior que 20% do salário, imprimir: Empréstimo não pode ser concedido." << endl;
 		cout << "Senão imprimir Empréstimo pode ser concedido." << endl;
+		cout << "" << endl;
 		cout << "" << endl;
 		cout << "" << endl;
 		cout << "insira o numero de qual deseja executar: ";
@@ -39,7 +40,7 @@ int main (){
 		
 			
 		while (at > 8){
-		 cout << "insira um valor valido:";
+	 	cout << "insira um valor valido:";	
 		 cin >> at; 
 		}
 		
@@ -95,6 +96,26 @@ int main (){
 			float imc = peso / (alt * alt);
 	
 			cout << "O seu IMC e " << imc;
+			
+			if (imc < 19) {
+			    cout << " abaixo do peso ideal" << endl;
+			}
+			
+			if (imc >= 19 and imc <= 25){
+			    cout << " no peso ideal" << endl; 
+			}
+			if (imc >= 26 and imc <= 30){
+				cout << " em sobrepeso" << endl;
+			}
+			if (imc >= 31 and imc <= 35){
+			    cout << " em obesidade I" << endl;
+			}
+			if (imc >= 36 and imc <= 40){
+				cout << " em obesidade II" << endl;
+			}
+			if (imc > 40){
+			    cout << " em obesidade morbida" << endl;
+			}
 		}
 		
 		if (at == 3){
@@ -178,6 +199,30 @@ int main (){
 		}
 		
 		if (at == 6){
+				
+	
+			float pri, por, dis, total;
+		
+			cout << "Insira o preco do produto: " << endl;
+			cin >> pri;
+			while (pri < 0) {
+				cout << "Insira um preco valido: " << endl;
+				cin >> pri;
+			}
+			
+			cout << "Insira quanto % de desconto: " << endl;
+			cin >> por;
+			while (por < 0) {
+				cout << "Insira um desconto valido: " << endl;
+				cin >> por;
+			}
+			
+			dis = (pri / 100) * por;
+			
+			total = pri - dis;
+			
+			cout << "O preco final com desconto e R$ " << total;
+	
 		}
 		
 		if (at == 7){
@@ -208,15 +253,43 @@ int main (){
 			}
 		}
 		
-		if (at == 8){
+		if (at == 8){	
+			float sal, em, pre, i;
+	
+			cout << "insira qual o valor do seu salario: ";
+			cin >> sal; 
+			cout << "insira o valor do emprestimo: ";
+			cin >> em ; 
+			cout << "insira em quantas parcelas pagara o emprestimo: ";
+			cin >> pre ; 
+			
+			i = em / pre;
+			float por = 0;
+			por = sal * 0.2;
+				
+			while (i > por) {
+				cout <<"O emprestimo nao pde ser concedido pois o valor da parcela e maior que 20% sde seu salario." << endl;
+				cout << "" << endl;
+				cout << "Por favor insira em quantas parcelas pagara o emprestimo novamente: ";
+				cin >> pre;
+				i = em / pre;
+			}		
+			
+			if (i < por){
+				cout << endl;
+				cout << "O emprestimo pode ser concedido com sucesso." << endl;
+				
+			}	
+					
 		}
 		
-		
 		cout << "" << endl;
 		cout << "" << endl;
-		cout << "Deseja selecionar outra atividade? digite 1 para escolher novamente ou digite 2 para encerrar:";
+		cout << "Deseja selecionar outra atividade? digite 1 para exibir a lista de atividades novamente ou digite qualuqer outra tecla para encerrar: ";
 		cin >> dnv;
-	}
-	
-	return 0; 
+		cout << "" << endl;
+}
+	return 0;
+
+
 }
