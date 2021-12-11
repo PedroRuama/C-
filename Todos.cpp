@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int main (){
 		cout << "4.  Dados 3 valores quaisquer (a, b e c) representando as medidas dos lados de um triangulo, faca um algoritmo" << endl;
 		cout << " para descobrir se formam ou nao um triangulo, se for triangulo qual seria: isosceles, escaleno ou equilatero." << endl;
 		cout << "" << endl;
-		cout << "5.  Inserir 3 números e exibir o maior deles. " << endl;
+		cout << "5.  Inserir 3 numeros e exibir o maior deles. " << endl;
 		cout << "" << endl;
 		cout << "6.  Montar programa solicitando descricao do produto, preço e % de desconto, exibir preço final com o desconto." << endl;
 		cout << "" << endl;
@@ -32,13 +33,13 @@ int main (){
 		cout << "" << endl;
 		cout << "8.  Solicitar salario, prestação. Se prestação for maior que 20% do salário, imprimir: Empréstimo não pode ser concedido." << endl;
 		cout << "Senão imprimir Empréstimo pode ser concedido." << endl;
-		cout << "" << endl;
-		cout << "" << endl;
-		cout << "" << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
 		cout << "insira o numero de qual deseja executar: ";
 		cin >> at; 
 		
-			
+	
 		while (at > 8){
 	 	cout << "insira um valor valido:";	
 		 cin >> at; 
@@ -93,8 +94,9 @@ int main (){
 				cin >> alt;
 			}
 			
+			
 			float imc = peso / (alt * alt);
-	
+			cout<< fixed << setprecision(1);
 			cout << "O seu IMC e " << imc;
 			
 			if (imc < 19) {
@@ -249,6 +251,7 @@ int main (){
 			}
 				
 			if (years >= 70){
+				.
 				cout << "Dispensado da  vortação" << endl;
 			}
 		}
