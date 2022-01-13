@@ -50,6 +50,7 @@ int main (){
 		
 		if (at == 0){
 			float reais, cotacao, conversao;
+			
 			cout << "Esse programa converte reais em dolares" << endl;
 			
 			cout << "quantos reais vc quer converter?" << endl;
@@ -58,7 +59,7 @@ int main (){
 			cout << "qual o valor da cotacao do dolar atualmente?" << endl;
 			cin >>cotacao;
 			
-			
+				cout<< fixed << setprecision(1);
 			conversao = reais/cotacao;
 			cout <<"seus " << reais <<" reias, equivalem a "<< conversao << " dolares." <<endl;
 		}
@@ -106,13 +107,13 @@ int main (){
 			if (imc >= 19 and imc <= 25){
 			    cout << " no peso ideal" << endl; 
 			}
-			if (imc >= 26 and imc <= 30){
+			if (imc > 25 and imc <= 30){
 				cout << " em sobrepeso" << endl;
 			}
-			if (imc >= 31 and imc <= 35){
+			if (imc > 30 and imc <= 35){
 			    cout << " em obesidade I" << endl;
 			}
-			if (imc >= 36 and imc <= 40){
+			if (imc > 35 and imc <= 40){
 				cout << " em obesidade II" << endl;
 			}
 			if (imc > 40){
@@ -251,18 +252,18 @@ int main (){
 			}
 				
 			if (years >= 70){
-				.
+				
 				cout << "Dispensado da  vortação" << endl;
 			}
 		}
 		
 		if (at == 8){	
-			float sal, em, pre, i;
+			float sal, em, pre, i, x;
 	
 			cout << "insira qual o valor do seu salario: ";
 			cin >> sal; 
 			cout << "insira o valor do emprestimo: ";
-			cin >> em ; 
+			cin >> em; 
 			cout << "insira em quantas parcelas pagara o emprestimo: ";
 			cin >> pre ; 
 			
@@ -270,11 +271,24 @@ int main (){
 			float por = 0;
 			por = sal * 0.2;
 				
-			while (i > por) {
+			while (i > por){
+				int x;
 				cout <<"O emprestimo nao pde ser concedido pois o valor da parcela e maior que 20% sde seu salario." << endl;
 				cout << "" << endl;
-				cout << "Por favor insira em quantas parcelas pagara o emprestimo novamente: ";
-				cin >> pre;
+				cout << "Por favor insira em quantas parcelas pagara o emprestimo novamente ou insira um novo valor:  ";
+				cout << "insira 1 para alterar o valor do emprestimo ou insira 2 para alterar a quantidade de parcelas ";
+				cin >> x;
+						
+				if (x == 1){
+					cout << "insira o valor do emprestimo: ";
+					cin >> em; 	
+				}
+				
+				if (x == 2){
+					cout << "insira em quantas parcelas pagara o emprestimo: ";
+					cin >> pre; 
+				}
+				
 				i = em / pre;
 			}		
 			
