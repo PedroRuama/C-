@@ -61,7 +61,7 @@ while x >= 0.05:
     x = x - 0.05
     cinc_c = cinc_c +1 
 
-while x >= 0.01:
+while x > 0:
     x = x - 0.01
     um_c = um_c + 1
    
