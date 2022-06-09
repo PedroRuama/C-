@@ -29,7 +29,7 @@ while tr > 0 and usr != ran:
     usr = int(input('insira outro valor, de 0 a 10:'))
 
 # porque o loop foi finalmente interrompido?
-if usr == rnd:
+if usr == ran:
   print("um verdadeiro guru")
 else:
   print("que pena")
