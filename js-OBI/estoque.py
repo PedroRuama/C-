@@ -1,22 +1,14 @@
-M, N = input().split()
+a = input().split()
+M = a[0]
+x = 0
+jv = []
 
-print(M)
-
-print(N)
-
-
-
-
-# M = X[0]
-# N = X[1]
-# iv = []
-# colunas = 0
-# linhas  = 0
-
-# while colunas <= X[0]:
-#     i = input().split()
-#     iv.append(i)
-#     colunas += 1
+while M >= x:
+    # i = input().split()
+    # jv.append(i)
+    x = x + 1
+    print(x)
     
-# print(iv)
+
+# print(jv)
 
