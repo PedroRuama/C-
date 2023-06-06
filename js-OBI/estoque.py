@@ -1,9 +1,33 @@
-M, N = input().split()
-
+X, Y = input().split()
+M = int(X) #Linas
+N = int(Y) #Colunas
 print(M)
 
 print(N)
 
+iv = []
+stop = 1
+
+while stop <= M:
+    
+    print("linha ", stop)
+    l = input().split()
+   
+    iv.append(l)
+    
+    stop = stop + 1
+    
+#.split
+
+
+print(iv[1])
+print(l[1])
+
+# M = X[0]
+# N = X[1]
+# iv = []
+# colunas = 0
+# linhas  = 0
 
 
 
@@ -12,11 +36,3 @@ print(N)
 # iv = []
 # colunas = 0
 # linhas  = 0
-
-# while colunas <= X[0]:
-#     i = input().split()
-#     iv.append(i)
-#     colunas += 1
-    
-# print(iv)
-
