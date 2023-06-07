@@ -6,6 +6,7 @@ print(M)
 print(N)
 
 iv = []
+
 stop = 1
 
 while stop <= M:
@@ -20,8 +21,10 @@ while stop <= M:
 #.split
 
 
-print(iv[1])
-print(l[1])
+print(iv)
+jv = iv[1]
+
+print(jv[0])
 
 # M = X[0]
 # N = X[1]
